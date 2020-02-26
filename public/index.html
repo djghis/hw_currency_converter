@@ -19,9 +19,14 @@
        </select>
       </div>
       <div id="converter">
-        <label for="amountToConvert"  ></label>
+        <label for="amountToConvert"></label>
         <input type="number" name="amountToConvert" value="" v-model=amountToConvert>
-        <p>The amount you will receive of {{currencyName}}: {{exchanged}}</p>
+        <p>The amount you will receive : {{exchanged}}</p>
+      </div>
+      <div id="back_converter">
+        <label for="amountToConvertBack"></label>
+        <input type="number" name="amountToConvertBack" value="" v-model=amountToConvertBack>
+        <p>the amount of Euros you will get {{backExchanged}}</p>
 
       </div>
     </div>
