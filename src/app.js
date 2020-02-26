@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       currencyRates: [],
       selectedCurrency: null,
-      amountToConvert: null,
-      exchanged: null
+      amountToConvert: null
+      // exchanged: null
 
     },
     mounted(){
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     computed: {
       exchanged: function(){
-        return amountToConvert * selectedCurrency
+        return this.amountToConvert * this.selectedCurrency;
       }
     },
     methods: {
