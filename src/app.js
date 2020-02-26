@@ -5,11 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#app',
     data: {
       currencyRates: [],
-      selectedCurrency: null
+      selectedCurrency: null,
+      amountToConvert: null,
+      exchanged: null
 
     },
     mounted(){
       this.getCurrencies()
+    },
+    computed: {
+      exchanged: function(){
+        return amountToConvert * selectedCurrency
+      }
     },
     methods: {
       getCurrencies: function(){

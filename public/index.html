@@ -9,14 +9,21 @@
   <body>
     <h1>Currency Calculator</h1>
     <div id="app">
+      <div id="selected_currency">
        <p>All currencies: {{currencyRates}}</p>
        <p>Selected Currency: {{selectedCurrency}}</p>
        <label for="currency_select">Select Currency</label>
        <select id="currency_select" v-model="selectedCurrency">
          <option disabled value="">Select a currency</option>
          <option v-for="(rate, currencyName, index) in currencyRates" :value="rate">{{ currencyName}}</option>
-
        </select>
       </div>
+      <div id="converter">
+        <label for="amountToConvert"  ></label>
+        <input type="number" name="amountToConvert" value="" v-model=amountToConvert>
+        <p>The amount you will receive of {{currencyName}}: {{exchanged}}</p>
+
+      </div>
+    </div>
   </body>
 </html>
