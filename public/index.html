@@ -9,11 +9,12 @@
   <body>
     <h1>Currency Calculator</h1>
     <div id="app">
-       <p>All currencies: {{currencyRates.rates}}</p>
+       <p>All currencies: {{currencyRates}}</p>
+       <p>Selected Currency: {{selectedCurrency}}</p>
        <label for="currency_select">Select Currency</label>
        <select id="currency_select" v-model="selectedCurrency">
          <option disabled value="">Select a currency</option>
-         <option v-for="(rate, currencyName, index) in currencyRates" :value="currency">{{ currencyName}}</option>
+         <option v-for="(rate, currencyName, index) in currencyRates" :value="rate">{{ currencyName}}</option>
 
        </select>
       </div>
